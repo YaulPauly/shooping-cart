@@ -15,7 +15,7 @@ export const Filters = () => {
         const filterMinPrice: string = event.target.value
         const parsedMinPrice: number = parseInt(filterMinPrice, 10);
 
-        setFilters((prev: IFilters) => ({
+        setFilters(prev => ({
             ...prev,
             minPrice: parsedMinPrice
         }))
@@ -25,7 +25,7 @@ export const Filters = () => {
     const handleChangeCategory = (event: ChangeEvent<HTMLSelectElement>) => {
         const filterCategory: string = event.target.value
 
-        setFilters((prev: IFilters) => ({
+        setFilters(prev => ({
             ...prev,
             category: filterCategory
         }))
