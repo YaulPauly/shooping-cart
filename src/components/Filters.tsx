@@ -1,6 +1,5 @@
 import { ChangeEvent, useId } from 'react'
 import './../styles/Filters.css'
-import { IFilters} from '../Interface'
 import useFilters from '../hooks/useFilters'
 
 
@@ -15,7 +14,7 @@ export const Filters = () => {
         const filterMinPrice: string = event.target.value
         const parsedMinPrice: number = parseInt(filterMinPrice, 10);
 
-        setFilters(prev => ({
+        setFilters((prev: any) => ({
             ...prev,
             minPrice: parsedMinPrice
         }))
@@ -25,7 +24,7 @@ export const Filters = () => {
     const handleChangeCategory = (event: ChangeEvent<HTMLSelectElement>) => {
         const filterCategory: string = event.target.value
 
-        setFilters(prev => ({
+        setFilters((prev: any) => ({
             ...prev,
             category: filterCategory
         }))
