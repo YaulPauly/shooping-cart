@@ -14,20 +14,20 @@ export const Filters = () => {
         const filterMinPrice: string = event.target.value
         const parsedMinPrice: number = parseInt(filterMinPrice, 10);
 
-        setFilters((prev: any) => ({
-            ...prev,
+        setFilters({
+            ...filters,
             minPrice: parsedMinPrice
-        }))
+        })
     }
 
 
     const handleChangeCategory = (event: ChangeEvent<HTMLSelectElement>) => {
         const filterCategory: string = event.target.value
 
-        setFilters((prev: any) => ({
-            ...prev,
+        setFilters({
+            ...filters,
             category: filterCategory
-        }))
+        })
     }
 
     return (
